@@ -5,7 +5,7 @@
 
 ##
 
-Projeto se trata do front-end de um site onde estou simulando uma interface baseado no jogo LoveRitmo / LoveBeat Steam.<br>
+Projeto se trata do front-end de um site onde estou simulando uma interface baseado no jogo Love Ritmo / LoveBeat Steam.<br>
 Com algumas diferenças do estilo original, a idéia é simular os comportamentos de um cliente de jogos online em ambiente web.
 Projeto para fins de mostrar meu desempenho em estilos e modificações, focadas no front end de um webapp !
 
@@ -13,7 +13,7 @@ Possui :
 - Header usando um background gradiente.
 - Animações com CSS3 puro
 - PopUps usando JavaScript Puro.
-- Jquery basico para funções como o graggable para as janelas, e limites pro mesmo.
+- Jquery basico para funções como o draggable para as janelas, e limites pro mesmo.
 - Soms interativos para cada elemento.
 
 ##
