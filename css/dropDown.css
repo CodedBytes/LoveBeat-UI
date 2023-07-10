@@ -3,6 +3,7 @@
     position: relative;
     display: inline-block;
 }
+
 .dropdown-content
 {
     display: none;
@@ -43,6 +44,7 @@
     min-height: 150px;
     max-height: 330px;
     width: 300px;
+    overflow: auto;
     box-shadow: 3px 4px 3px rgb(0, 0, 0);
     border-color: #ddd;
     border-radius: 10px;
@@ -51,6 +53,7 @@
     margin-left:-170px;
     top: 100px;
 }
+
 .advice-Window
 {
     display: none;
@@ -89,6 +92,7 @@
     background: linear-gradient(0deg, rgba(252,252,252,1) 0%, rgba(177,177,177,1) 0%, rgba(244,244,244,1) 69%);
     box-shadow: 0px 1px 1px rgb(36, 36, 36);
 }
+
 .info-Window .caption button.btnCloseWindow,
 .advice-Window .caption button.btnCloseWindow
 {
@@ -105,6 +109,7 @@
     border-top-right-radius: 8px;
     transition: 0.1s ease-in;
 }
+
 .info-Window .caption button.btnCloseWindow:hover,
 .advice-Window .caption button.btnCloseWindow:hover
 {
@@ -133,6 +138,7 @@
     border-bottom-right-radius: 9px;
     border-bottom-left-radius: 9px;
 }
+
 .info-Window .content,
 .advice-Window .content
 {
@@ -142,6 +148,7 @@
     text-align: center;
     padding: 5px 0px;
 }
+
 .info-Window .content p,
 .advice-Window .contet p
 {
@@ -156,19 +163,25 @@
 }
 
 
-.dropdown-content::-webkit-scrollbar
+.dropdown-content::-webkit-scrollbar,
+.info-Window::-webkit-scrollbar,
+.advice-Window::-webkit-scrollbar
 {
     width: 8px;
 }
 
-.dropdown-content::-webkit-scrollbar-thumb
+.dropdown-content::-webkit-scrollbar-thumb,
+.info-Window::-webkit-scrollbar-thumb,
+.advice-Window::-webkit-scrollbar-thumb
 {
     background: rgb(160, 160, 160); 
     border-radius: 15px;
     height: 80%;
 }
 
-.dropdown-content::-webkit-scrollbar-thumb:hover
+.dropdown-content::-webkit-scrollbar-thumb:hover,
+.info-Window::-webkit-scrollbar-thumb:hover,
+.advice-Window::-webkit-scrollbar-thumb:hover
 {
     background: rgb(134, 134, 134); 
 }
