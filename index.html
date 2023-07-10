@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoveBeat - Lobby</title>
+    <link rel="shortcut icon" href="./img/favcon.png" type="image/x-icon">
+    <link rel="stylesheet" href="./css/lobby.css">
+    <link rel="stylesheet" href="./css/dropDown.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+</head>
+<body>
+
+    <!-- NavBar -->
+    <section class="header">
+        <div class="leftMenu"><!-- Lado esquerdo -->
+            <div class="channelDrop" onclick="sfxBtn(); channelMenu();" id="btn">
+                <span id="btn"><span id="channel">Canal 1</span></span>
+                <button type="menu" class="downArrow" id="btn"></button>
+            </div>
+
+            <div id="ChannelDropdown" class="dropdown-content-channels">
+                <a href="#" class="channel-content" onclick="sfxIcon(); document.getElementById('channel').innerHTML = 'Canal 1';">Canal 1</a>
+                <a href="#" class="channel-content" onclick="sfxIcon(); document.getElementById('channel').innerHTML = 'Canal 2';">Canal 2</a>
+            </div>
+        </div>
+        
+        <div class="rightMenu" id="desktop"><!-- Lado direito -->
+            <a href="#" class="icons" onclick="sfxIcon();"><img src="./img/icons/letter.png" alt="" /></a>
+
+            <a href="javascript:void(0);" class="icons" onclick="sfxBtn(); menu();" id="dropbtn"><img src="./img/icons/more.png" alt="" id="dropbtn" /></a>
+            <div id="dropdown" class="dropdown-content">
+                <a href="javascript:void(0);" class="icons" onclick="sfxIcon(); InfoWindow();" id="windowInf"><img src="./img/icons/Info.png" alt="" id="windowInf"/></a>
+            </div>
+
+            <a href="#" class="buttons" onclick="sfxBtn();"><img src="./img/icons/button2.png" alt="" /><span>Notícias</span></a>
+            <a href="#" class="buttons" onclick="sfxBtn();"><img src="./img/icons/button1.png" alt="" /><i class="fa-brands fa-square-github"></i></a>
+        </div>
+
+        
+        <!-- Windows -->
+        <div id="window" class="info-Window" style="word-break: break-word; word-wrap: break-word;">
+            <section class="caption" id="captDrag">
+                <span>Informações</span>
+                <button type="button" class="btnCloseWindow" id="close" onclick="sfxBtn();">X</button>
+            </section>
+
+            <section class="content">
+                <p>Interface de usuário, baseada em clientes de jogos</p>
+                <p>O intuíto do projeto é simular a UI base de um Jogo com leves modificações, como Janelas, soms e algumas funções.</p>
+                <p>Sinta-se a vontade para visitar meu github, e navegar pelos repositorios disponiveis para mais projetos front-end !</p>
+            </section>
+
+            <section class="footer"><p>Versionamento da UI : v0.1</p></section>
+        </div>
+
+    </section>
+
+    <section class="pagina" id="windowBounds">
+        <div class="main" >
+            
+        </div>
+    </section>
+
+    <!-- SFX para o website -->
+    <script src="./js/sfxSounds.js"></script>
+
+    <!-- Dropdown menu -->
+    <script src="./js/dropMenu.js"></script>
+
+    <!-- Sistema de arrasta e solta para janelas -->
+    <script src="./js/windowDragDrop.js"></script>
+    
+
+    <!-- Snippet que adiciona listener na div do dropdown de canais. -->
+    <script>
+        document.getElementById('btn').addEventListener('click', function() {
+            var c = document.getElementsByClassName('downArrow');
+            for (var i = 0; i < c.length; i++) {
+                c[i].classList.add('animate');
+                c[i].addEventListener('animationend', function() {
+                this.classList.remove('animate');
+                });
+            }
+        });
+    </script>
+
+    
+</body>
+</html>

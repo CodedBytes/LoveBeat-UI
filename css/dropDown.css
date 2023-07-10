@@ -1,0 +1,203 @@
+.dropdown
+{
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content
+{
+    display: none;
+    position: absolute;
+    padding: 13px 20px;
+    background-color: #f1f1f1d3;
+    min-width: 60px;
+    min-height: 70px;
+    max-width: 250px;
+    overflow: auto;
+    box-shadow: 3px 4px 3px rgb(0, 0, 0);
+    border-color: #ddd;
+    border-radius: 10px;
+    top: 48px;
+}
+
+.dropdown-content-channels
+{
+    display: none;
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #f1f1f1ec;
+    min-height: 70px;
+    min-width: 145px;
+    overflow: auto;
+    box-shadow: 3px 4px 3px rgb(0, 0, 0);
+    border-color: #ddd;
+    border-radius: 10px;
+    top: 48px;
+}
+
+.info-Window
+{
+    display: none;
+    position: absolute;
+    padding: 40px 20px;
+    background-color: #f1f1f1ec;
+    min-height: 150px;
+    max-height: 330px;
+    width: 300px;
+    box-shadow: 3px 4px 3px rgb(0, 0, 0);
+    border-color: #ddd;
+    border-radius: 10px;
+    left: 54%;
+    right: 45%;
+    margin-left:-170px;
+    top: 100px;
+}
+.advice-Window
+{
+    display: none;
+    position: absolute;
+    padding: 40px 20px;
+    background-color: #f1f1f1ec;
+    min-height: 150px;
+    max-height: 330px;
+    width: 360px;
+    box-shadow: 3px 4px 3px rgb(0, 0, 0);
+    border-color: #ddd;
+    border-radius: 10px;
+    left: 54%;
+    right: 45%;
+    margin-left:-170px;
+    top: 100px;
+}
+
+.info-Window .caption,
+.advice-Window .caption
+{
+    border: 1px solid black;
+    position: absolute;
+    width: 100%;
+    height: 25px;
+    top: 0px;
+    left: 0;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    text-align: center;
+    font-size: 17px;
+    justify-content: center;
+    font-weight: 900;
+    color: #000000;
+    background: rgb(252,252,252);
+    background: linear-gradient(0deg, rgba(252,252,252,1) 0%, rgba(177,177,177,1) 0%, rgba(244,244,244,1) 69%);
+    box-shadow: 0px 1px 1px rgb(36, 36, 36);
+}
+.info-Window .caption button.btnCloseWindow,
+.advice-Window .caption button.btnCloseWindow
+{
+    position: absolute;
+    width: 50px;
+    height: 100%;
+    right: 0;
+    top: 0;
+    border: 1px solid black;
+    color: #ddd;
+    font-size: 17px;
+    font-weight: 800;
+    background-color: rgb(252, 56, 56);
+    border-top-right-radius: 8px;
+    transition: 0.1s ease-in;
+}
+.info-Window .caption button.btnCloseWindow:hover,
+.advice-Window .caption button.btnCloseWindow:hover
+{
+    background-color: rgb(250, 80, 80);
+    transition: 0.1s ease-out;
+}
+.info-Window .caption button.btnCloseWindow:active,
+.advice-Window .caption button.btnCloseWindow:active
+{
+    background-color: rgb(253, 15, 15);
+    top: 1px;
+}
+
+.info-Window .footer,
+.advice-Window .footer
+{
+    position: absolute;
+    display: flex;
+    width: 100%;
+    background-color: #494949;
+    left: 0;
+    color: #bbbbbb;
+    height: 30px;
+    bottom: 0px;
+    justify-content: center;
+    border-bottom-right-radius: 9px;
+    border-bottom-left-radius: 9px;
+}
+.info-Window .content,
+.advice-Window .content
+{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    text-align: center;
+    padding: 5px 0px;
+}
+.info-Window .content p,
+.advice-Window .contet p
+{
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.info-Window .footer p,
+.advice-Window .footer p
+{
+    margin-top: 5px;
+}
+
+
+.dropdown-content::-webkit-scrollbar
+{
+    width: 8px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb
+{
+    background: rgb(160, 160, 160); 
+    border-radius: 15px;
+    height: 80%;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb:hover
+{
+    background: rgb(134, 134, 134); 
+}
+
+.dropdown a:hover {background-color: #ddd;}
+  
+.show {
+    display: flex;
+    flex-wrap: nowrap;
+    animation-name: showPopUp;
+    animation-duration: 0.09s;
+}
+
+.showChannels {
+    display: block;
+    animation-name: showPopUp;
+    animation-duration: 0.09s;
+}
+
+.showWindow {
+    display: block;
+    animation-name: showPopUp;
+    animation-duration: 0.09s;
+}
+
+
+@keyframes showPopUp {
+    0%   {background-color: #f1f1f100;}
+    25%  {background-color: #f1f1f13f;}
+    50%  {background-color: #f1f1f17a;}
+    100% {background-color: #f1f1f1c9;}
+  }
