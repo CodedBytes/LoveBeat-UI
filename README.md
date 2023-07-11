@@ -17,6 +17,19 @@ Possui :
 - Soms interativos para cada elemento.
 
 ##
+
+Novas Adições / Correções :
+
+- CSS3 / JS : Adição de mais janelas.</p>
+- CSS3 : Adição de scrollbars para janelas novas.</p>
+- CSS3 : Bug no scroll, no qual estava rolando tudo e não só o conteúdo, concertado.</p>
+- CSS3 : Codigo mais organizado.</p>
+- HTML5 : Codigo mais organizado.</p>
+- JQuery : Função 'removeAttr', usada para controlar o reposicionamento das janelas, foi mudada de lugar.</p>
+- Funções : 2 novos botões: Changes e Community funcionais.</p>
+- JavaScript : Novo JS para controlar as abas da janela community.</p>
+
+ ##
  
 As linguagens usadas foram : <br>
   ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
@@ -30,7 +43,6 @@ As Frameworks usadas foram : <br>
 
 Imagem da pagina : <br>
 <img src="/demo1.png" width="500px">
-<img src="/demo2.png" width="500px">
 ## 
 
 ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white) <br> DJ.Next#1649
