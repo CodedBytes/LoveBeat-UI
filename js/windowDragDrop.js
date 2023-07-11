@@ -1,4 +1,4 @@
-// faz as janelas serem arrastaveis com limite baseado no body
+// faz as janelas serem arrastaveis com limite baseado na pagina
 $("#window").draggable({
   handle: "#captDrag",
   containment: '#windowBounds',
@@ -20,7 +20,7 @@ $("#windowFriends").draggable({
   drag: drag
 });
 
-
+// Resolvendo bug onde a janela clipa pra fora do body
 function drag(e, ui) {
   if (ui.position.left < 170) {
     ui.position.left = 170;
