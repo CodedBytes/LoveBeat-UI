@@ -11,6 +11,7 @@ function menu() {
   }
 }
 
+// Canais 
 function channelMenu() {
   document.getElementById("ChannelDropdown").classList.toggle("showChannels");
   if(document.getElementById("ChannelDropdown").classList.contains("showChannels"))
@@ -23,7 +24,8 @@ function channelMenu() {
   }
 }
 
-function InfoWindow() {
+// Janela Info
+function windowInfo() {
   document.getElementById("window").classList.toggle("showWindow");
   if(document.getElementById("window").classList.contains("showWindow"))
   {
@@ -32,8 +34,49 @@ function InfoWindow() {
   }else{
     var sfx = new Audio("./audios/diagClose.wav");
     sfx.play();
+  }windowAdvice
+}
+
+// Janela Advice
+function windowAdvice() {
+  document.getElementById("windowAdvice").classList.toggle("showAdv");
+  if(document.getElementById("windowAdvice").classList.contains("showAdv"))
+  {
+    var sfx = new Audio("./audios/diagOpen.wav");
+    sfx.play();
+  }else{
+    var sfx = new Audio("./audios/diagClose.wav");
+    sfx.play();
   }
 }
+
+// Janela changes
+function windowChange() {
+  document.getElementById("windowChanges").classList.toggle("showChanges");
+  if(document.getElementById("windowChanges").classList.contains("showChanges"))
+  {
+    var sfx = new Audio("./audios/diagOpen.wav");
+    sfx.play();
+  }else{
+    var sfx = new Audio("./audios/diagClose.wav");
+    sfx.play();
+  }
+}
+
+// Janela friends
+function windowFriend() {
+  document.getElementById("windowFriends").classList.toggle("showFriends");
+  if(document.getElementById("windowFriends").classList.contains("showFriends"))
+  {
+    var sfx = new Audio("./audios/diagOpen.wav");
+    sfx.play();
+  }else{
+    var sfx = new Audio("./audios/diagClose.wav");
+    sfx.play();
+  }
+}
+
+
 
 // Fecha Dropdown se clicar fora dele
 window.onclick = function(event) {
@@ -67,16 +110,62 @@ window.onclick = function(event) {
   }
 
   //Janela de informação
-  if (!event.target.matches('#wInfo')) {
+  if (!event.target.matches('#windowInf')) {
     var dropdowns = document.getElementsByClassName("info-Window");
     var i;
     for (i = 0; i < dropdowns.length; i++) {
       var openDropdown = dropdowns[i];
-      if (openDropdown.classList.contains('showWindow') && event.target.matches('#close')) {
+      if (openDropdown.classList.contains('showWindow') && event.target.matches('#closeInfo')) {
         openDropdown.classList.remove('showWindow');
         var sfx = new Audio("./audios/diagClose.wav");
+        $("#window").removeAttr('style');
         sfx.play();
-      }
+      }else{}
+    }
+  }
+
+  //Janela de noticias
+  if (!event.target.matches('#windowAdv')) {
+    var dropdowns = document.getElementsByClassName("advice-Window");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('showAdv') && event.target.matches('#closeAdv')) {
+        openDropdown.classList.remove('showAdv');
+        var sfx = new Audio("./audios/diagClose.wav");
+        $("#windowAdvice").removeAttr('style');
+        sfx.play();
+      }else{}
+    }
+  }
+
+  //Janela de mudanças
+  if (!event.target.matches('#windowCnges')) {
+    var dropdowns = document.getElementsByClassName("changes-Window");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('showChanges') && event.target.matches('#closeChanges')) {
+        openDropdown.classList.remove('showChanges');
+        var sfx = new Audio("./audios/diagClose.wav");
+        $("#windowChanges").removeAttr('style');
+        sfx.play();
+      }else{}
+    }
+  }
+
+  //Janela de amigos
+  if (!event.target.matches('#btnFriends')) {
+    var dropdowns = document.getElementsByClassName("friends-Window");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('showFriends') && event.target.matches('#closeFriends')) {
+        openDropdown.classList.remove('showFriends');
+        var sfx = new Audio("./audios/diagClose.wav");
+        $("#windowFriends").removeAttr('style');
+        sfx.play();
+      }else{}
     }
   }
 }
