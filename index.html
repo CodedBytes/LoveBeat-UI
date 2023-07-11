@@ -6,6 +6,7 @@
     <title>LoveBeat - Lobby</title>
     <link rel="shortcut icon" href="./img/favcon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/lobby.css">
+    <link rel="stylesheet" href="./css/tabStyles.css">
     <link rel="stylesheet" href="./css/dropDown.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
@@ -15,7 +16,9 @@
 
     <!-- NavBar -->
     <section class="header">
-        <div class="leftMenu"><!-- Lado esquerdo -->
+
+        <!-- Lado esquerdo -->
+        <div class="leftMenu">
             <div class="channelDrop" onclick="sfxBtn(); channelMenu();" id="btn">
                 <span id="btn"><span id="channel">Canal 1</span></span>
                 <button type="menu" class="downArrow" id="btn"></button>
@@ -25,44 +28,125 @@
                 <a href="#" class="channel-content" onclick="sfxIcon(); document.getElementById('channel').innerHTML = 'Canal 1';">Canal 1</a>
                 <a href="#" class="channel-content" onclick="sfxIcon(); document.getElementById('channel').innerHTML = 'Canal 2';">Canal 2</a>
             </div>
+
+            <a href="javascript:void(0);" class="icons" onclick="sfxIcon(); windowChange();" id="windowCnges"><img src="./img/icons/changes.png" alt="" id="windowCnges" /></a>
         </div>
         
-        <div class="rightMenu" id="desktop"><!-- Lado direito -->
+        <!-- Lado direito -->
+        <div class="rightMenu" id="desktop">
+            <a href="javascript:void(0);" class="icons" onclick="sfxIcon(); windowFriend();" id="btnFriends"><img src="./img/icons/community.png" alt="" id="btnFriends"/></a>
             <a href="#" class="icons" onclick="sfxIcon();"><img src="./img/icons/letter.png" alt="" /></a>
 
             <a href="javascript:void(0);" class="icons" onclick="sfxBtn(); menu();" id="dropbtn"><img src="./img/icons/more.png" alt="" id="dropbtn" /></a>
             <div id="dropdown" class="dropdown-content">
-                <a href="javascript:void(0);" class="icons" onclick="sfxIcon(); InfoWindow();" id="windowInf"><img src="./img/icons/Info.png" alt="" id="windowInf"/></a>
+                <a href="javascript:void(0);" class="icons" onclick="sfxIcon(); windowInfo();" id="windowInf"><img src="./img/icons/Info.png" alt="" id="windowInf"/></a>
             </div>
 
-            <a href="#" class="buttons" onclick="sfxBtn();"><img src="./img/icons/button2.png" alt="" /><span>Notícias</span></a>
+            <a href="#" class="buttons" onclick="sfxBtn(); windowAdvice();" id="windowAdv"><img src="./img/icons/button2.png" alt="" /><span>Noticias</span></a>
             <a href="#" class="buttons" onclick="sfxBtn();"><img src="./img/icons/button1.png" alt="" /><i class="fa-brands fa-square-github"></i></a>
-        </div>
-
-        
-        <!-- Windows -->
-        <div id="window" class="info-Window" style="word-break: break-word; word-wrap: break-word;">
-            <section class="caption" id="captDrag">
-                <span>Informações</span>
-                <button type="button" class="btnCloseWindow" id="close" onclick="sfxBtn();">X</button>
-            </section>
-
-            <section class="content">
-                <p>Interface de usuário, baseada em clientes de jogos</p>
-                <p>O intuíto do projeto é simular a UI base de um Jogo com leves modificações, como Janelas, soms e algumas funções.</p>
-                <p>Sinta-se a vontade para visitar meu github, e navegar pelos repositorios disponiveis para mais projetos front-end !</p>
-            </section>
-
-            <section class="footer"><p>Versionamento da UI : v0.1</p></section>
         </div>
 
     </section>
 
     <section class="pagina" id="windowBounds">
         <div class="main" >
+
+            <!-- Window List -->
+             <!-- Window INFO -->
+            <div id="window" class="info-Window" style="word-break: break-word; word-wrap: break-word;">
+                <section class="caption" id="captDrag">
+                    <span>Informações</span>
+                    <button type="button" class="btnCloseWindow" id="closeInfo" onclick="sfxBtn();">X</button>
+                </section>
+
+                <section class="content">
+                    <p>Interface de usuário, baseada em clientes de jogos</p>
+                    <p>O intuíto do projeto é simular a UI base de um Jogo com leves modificações, como Janelas, soms e algumas funções.</p>
+                    <p>Sinta-se a vontade para visitar meu github, e navegar pelos repositorios disponiveis para mais projetos front-end !</p>
+                </section>
+
+                <section class="footer"><p>Versionamento da UI : v0.2</p></section>
+            </div>
+
+            <!-- Window ADVICE -->
+            <div id="windowAdvice" class="advice-Window" style="word-break: break-word; word-wrap: break-word;">
+                <section class="caption" id="captDrag">
+                    <span>Noticias</span>
+                    <button type="button" class="btnCloseWindow" id="closeAdv" onclick="sfxBtn();">X</button>
+                </section>
+
+                <section class="content">
+                    <p>Exemplo de janela contendo as principais noticias do jogo.</p>
+                    <p>Geralmente sobre alguma atualização do servidor ou cliente.</p>
+                </section>
+
+                <section class="footer"><p>Usuario : Guest</p></section>
+            </div>
+
+            <!-- Window Changes -->
+            <div id="windowChanges" class="changes-Window" style="word-break: break-word; word-wrap: break-word;">
+                <section class="caption" id="captDrag">
+                    <span>Mudanças</span>
+                    <button type="button" class="btnCloseWindow" id="closeChanges" onclick="sfxBtn();">X</button>
+                </section>
+
+                <section class="content" id="notCenter">
+                    <center><p>Mudanças desde a ultima repo :</p><br></center><!-- temp -->
+                    <p> - CSS3 / JS : Adição de mais janelas.</p>
+                    <p> - CSS3 : Adição de scrollbars para janelas novas.</p>
+                    <p> - CSS3 : Bug no scroll, no qual estava rolando tudo e não só o conteúdo, concertado.</p>
+                    <p> - CSS3 : Codigo mais organizado.</p>
+                    <p> - HTML5 : Codigo mais organizado.</p>
+                    <p> - JQuery : Função 'removeAttr', usada para controlar o reposicionamento das janelas, foi mudada de lugar.</p>
+                    <p> - Funções : 2 novos botões: Changes e Community funcionais.</p>
+                    <p> - JavaScript : Novo JS para controlar as abas da janela community.</p>
+                </section>
+
+                <section class="footer"><p>Usuario : Guest</p></section>
+            </div>
+
+            <!-- Window friends -->
+            <div id="windowFriends" class="friends-Window" style="word-break: break-word; word-wrap: break-word;">
+                <section class="caption" id="captDrag">
+                    <span>Lista de amigos</span>
+                    <button type="button" class="btnCloseWindow" id="closeFriends" onclick="sfxBtn();">X</button>
+                </section>
+
+                <!-- Abas -->
+                <div class="tab" onload="openTab(event, 'Amigos');">
+                    <button class="tabObj active" onclick="openTab(event, 'Amigos'); sfxBtn();">Amigos</button>
+                    <button class="tabObj" onclick="openTab(event, 'Blocks'); sfxBtn();">Bloqueados</button>
+                </div>
+
+                <!-- Conteudos aba de amigos -->
+                <section class="tabContent" id="Amigos" style="display: block;">
+                    <a href="#">Friend 1</a>
+                    <a href="#">Friend 2</a>
+                    <a href="#">Friend 3</a>
+                    <a href="#">Friend 4</a>
+                    <a href="#">Friend 5</a>
+                    <a href="#">Friend 6</a>
+                    <a href="#">Friend 7</a>
+                    <a href="#">Friend 8</a>
+                </section>
+
+                <!-- Conteudos aba de bloqueados -->
+                <section class="tabContent" id="Blocks" style="display: none;">
+                    <p>Nenhum player bloqueado.</p>
+                </section>
+                <!-- Fim de conteudos. -->
+
+                <section class="footer"><p>Usuario : Guest</p></section>
+            </div>
+            <!-- End of Window List -->
+
+
             
         </div>
     </section>
+
+
+
 
     <!-- SFX para o website -->
     <script src="./js/sfxSounds.js"></script>
@@ -73,6 +157,8 @@
     <!-- Sistema de arrasta e solta para janelas -->
     <script src="./js/windowDragDrop.js"></script>
     
+    <!-- Js para controlar as tabs da janela community -->
+    <script src="./js/tabHandler.js"></script>
 
     <!-- Snippet que adiciona listener na div do dropdown de canais. -->
     <script>
@@ -86,7 +172,5 @@
             }
         });
     </script>
-
-    
 </body>
 </html>

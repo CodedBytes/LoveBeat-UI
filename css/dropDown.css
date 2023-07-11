@@ -3,7 +3,6 @@
     position: relative;
     display: inline-block;
 }
-
 .dropdown-content
 {
     display: none;
@@ -35,7 +34,9 @@
     top: 48px;
 }
 
-.info-Window
+/* WINDOWS */
+.info-Window,
+.changes-Window
 {
     display: none;
     position: absolute;
@@ -43,16 +44,17 @@
     background-color: #f1f1f1ec;
     min-height: 150px;
     max-height: 330px;
-    width: 300px;
-    overflow: auto;
+    width: 320px;
     box-shadow: 3px 4px 3px rgb(0, 0, 0);
     border-color: #ddd;
     border-radius: 10px;
     left: 54%;
     right: 45%;
     margin-left:-170px;
-    top: 100px;
+    top: 116px;
 }
+
+
 
 .advice-Window
 {
@@ -67,13 +69,33 @@
     border-color: #ddd;
     border-radius: 10px;
     left: 54%;
-    right: 45%;
+    right: 46%;
     margin-left:-170px;
-    top: 100px;
+    top: 120px;
 }
 
+.friends-Window
+{
+    display: none;
+    position: absolute;
+    padding: 40px 20px;
+    background-color: #f1f1f1ec;
+    height: 330px;
+    width: 280px;
+    box-shadow: 3px 4px 3px rgb(0, 0, 0);
+    border-color: #ddd;
+    border-radius: 10px;
+    left: 54%;
+    right: 46%;
+    margin-left:-170px;
+    top: 120px;
+}
+/*---------------------------------------*/
+
 .info-Window .caption,
-.advice-Window .caption
+.advice-Window .caption,
+.changes-Window .caption,
+.friends-Window .caption
 {
     border: 1px solid black;
     position: absolute;
@@ -94,7 +116,9 @@
 }
 
 .info-Window .caption button.btnCloseWindow,
-.advice-Window .caption button.btnCloseWindow
+.advice-Window .caption button.btnCloseWindow,
+.changes-Window .caption button.btnCloseWindow,
+.friends-Window .caption button.btnCloseWindow
 {
     position: absolute;
     width: 50px;
@@ -111,20 +135,27 @@
 }
 
 .info-Window .caption button.btnCloseWindow:hover,
-.advice-Window .caption button.btnCloseWindow:hover
+.advice-Window .caption button.btnCloseWindow:hover,
+.changes-Window .caption button.btnCloseWindow:hover,
+.friends-Window .caption button.btnCloseWindow:hover
 {
     background-color: rgb(250, 80, 80);
     transition: 0.1s ease-out;
 }
+
 .info-Window .caption button.btnCloseWindow:active,
-.advice-Window .caption button.btnCloseWindow:active
+.advice-Window .caption button.btnCloseWindow:active,
+.changes-Window .caption button.btnCloseWindow:active,
+.friends-Window .caption button.btnCloseWindow:active
 {
     background-color: rgb(253, 15, 15);
     top: 1px;
 }
 
 .info-Window .footer,
-.advice-Window .footer
+.advice-Window .footer,
+.changes-Window .footer,
+.friends-Window .footer
 {
     position: absolute;
     display: flex;
@@ -140,24 +171,41 @@
 }
 
 .info-Window .content,
-.advice-Window .content
+.advice-Window .content,
+.changes-Window .content
 {
     display: flex;
     width: 100%;
+    max-height: 250px; /*fix para o scroll*/
+    overflow: auto; /*fix para o scroll*/
     flex-wrap: wrap;
     text-align: center;
     padding: 5px 0px;
 }
 
+
+.changes-Window .content#notCenter
+{
+    text-align: left;
+    display: block;
+    width: 100%;
+    flex-wrap: wrap;
+    padding: 5px 0px;
+}
+
 .info-Window .content p,
-.advice-Window .contet p
+.advice-Window .content p,
+.changes-Window .content p,
+.friends-Window .tabContent p
 {
     font-weight: 600;
     margin-bottom: 10px;
 }
 
 .info-Window .footer p,
-.advice-Window .footer p
+.advice-Window .footer p,
+.changes-Window .footer p,
+.friends-Window .footer p
 {
     margin-top: 5px;
 }
@@ -165,43 +213,46 @@
 
 .dropdown-content::-webkit-scrollbar,
 .info-Window::-webkit-scrollbar,
-.advice-Window::-webkit-scrollbar
+.advice-Window::-webkit-scrollbar,
+.changes-Window .content::-webkit-scrollbar,
+.friends-Window .tabContent::-webkit-scrollbar
 {
-    width: 8px;
+    width: 5px;
 }
 
 .dropdown-content::-webkit-scrollbar-thumb,
 .info-Window::-webkit-scrollbar-thumb,
-.advice-Window::-webkit-scrollbar-thumb
+.advice-Window::-webkit-scrollbar-thumb,
+.changes-Window .content::-webkit-scrollbar-thumb,
+.friends-Window .tabContent::-webkit-scrollbar-thumb
 {
     background: rgb(160, 160, 160); 
     border-radius: 15px;
-    height: 80%;
 }
 
 .dropdown-content::-webkit-scrollbar-thumb:hover,
 .info-Window::-webkit-scrollbar-thumb:hover,
-.advice-Window::-webkit-scrollbar-thumb:hover
+.advice-Window::-webkit-scrollbar-thumb:hover,
+.changes-Window .content::-webkit-scrollbar-thumb:hover,
+.friends-Window .tabContent::-webkit-scrollbar-thumb:hover
 {
     background: rgb(134, 134, 134); 
 }
 
-.dropdown a:hover {background-color: #ddd;}
-  
-.show {
+.show
+ {
     display: flex;
     flex-wrap: nowrap;
     animation-name: showPopUp;
     animation-duration: 0.09s;
 }
 
-.showChannels {
-    display: block;
-    animation-name: showPopUp;
-    animation-duration: 0.09s;
-}
-
-.showWindow {
+.showChannels,
+.showWindow,
+.showAdv,
+.showChanges,
+.showFriends
+ {
     display: block;
     animation-name: showPopUp;
     animation-duration: 0.09s;
