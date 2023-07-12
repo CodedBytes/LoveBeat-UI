@@ -1,13 +1,21 @@
 /* div da aba  */
-.friends-Window .tab 
+.friends-Window .tab
 {
     overflow: hidden;
     background-color: #f1f1f100;
     z-index:2;
 }
+.mail-Window .tab
+{
+    overflow: hidden;
+    position: absolute;
+    background-color: #f1f1f100;
+    z-index:2;
+}
   
 /* botoes da aba */
-.friends-Window .tab button
+.friends-Window .tab button,
+.mail-Window .tab button
 {
     background-color: inherit;
     float: left;
@@ -20,23 +28,58 @@
     border-top-left-radius: 13px;
     border-top-right-radius: 13px;
     border-bottom-left-radius: 13px;
+    background: rgb(252,252,252);
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(200,200,200,1) 16%, rgba(244,244,244,1) 64%);
+    border: 1px solid black;
     padding: 1px 15px;
     transition: 0.3s;
     font-size: 17px;
 }
 
-/* muda background dos botoes ao ficar com ele em cima */
-.friends-Window .tab button:hover
+.friends-Window .tab button#friendBStyle,
+.mail-Window .tab button#letterStyle
 {
-    background-color: #ddd;
+    background-color: inherit;
+    float: left;
+    border: none;
+    height: 40px;
+    outline: none;
+    font-weight: 800;
+    font-size: 15px;
+    cursor: pointer;
+    margin-left: 7px;
+    border-top-left-radius: 13px;
+    border-top-right-radius: 13px;
+    border-bottom-left-radius: 0px;
+    background: rgb(252,252,252);
+    background: linear-gradient(180deg, rgba(252,252,252,1) 0%, rgba(200,200,200,1) 16%, rgba(244,244,244,1) 64%);
+    border: 1px solid black;
+    padding: 1px 15px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+
+/* muda background dos botoes ao ficar com ele em cima */
+.friends-Window .tab button:hover,
+.friends-Window .tab button#friendBStyle:hover,
+.mail-Window .tab button:hover,
+.mail-Window .tab button#letterStyle:hover
+{
+    background: rgb(247,247,247);
+background: linear-gradient(180deg, rgba(247,247,247,1) 3%, rgba(238,238,238,1) 68%, rgba(226,225,225,1) 97%);
 }
 
 /* classe active dos botoes */
 .friends-Window .tab button.active,
-.friends-Window .tab button:active
+.friends-Window .tab button#friendBStyle.active,
+.mail-Window .tab button.active,
+.mail-Window .tab button#letterStyle.active
 {
-    background: rgb(252,252,252);
-    background: linear-gradient(0deg, rgba(252,252,252,1) 0%, rgba(200,200,200,1) 16%, rgba(244,244,244,1) 64%);
+    
+    background: rgb(249,129,72);
+background: linear-gradient(180deg, rgba(249,129,72,1) 3%, rgba(249,170,146,1) 30%, rgba(251,198,179,1) 90%);
+
 }
 
 /* conteudo da tab */
@@ -44,15 +87,58 @@
 {
     display: flex;
     width: 100%;
-    height: 210px; /*fix para o scroll*/
+    height: 228px; /*fix para o scroll*/
     overflow: auto; /*fix para o scroll*/
     flex-wrap: nowrap;
     text-align: left;
     position: relative;
-    top: -5px;
+    top: 3px;
     background-color: #f0f0f0;
     border-radius: 10px;
     padding: 8px 8px;
+}
+
+.mail-Window .legenda
+{
+    position: absolute;
+    display: flex;
+    justify-content: space-between;
+    width: 365px;
+    padding: 5px 8px;
+    font-size: 18px;
+    font-weight: 800;
+    top: 80px;
+    height: 35px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    background: rgb(252,252,252);
+    background: linear-gradient(0deg, rgba(252,252,252,1) 0%, rgb(202, 202, 202) 0%, rgba(244,244,244,1) 69%);
+}
+
+.mail-Window .legenda .sender
+{
+    margin-left: 20px;
+}
+
+.mail-Window .legenda .mail
+{
+    margin-right: 140px;
+}
+
+.mail-Window .tabContent
+{
+    display: flex;
+    width: 100%;
+    height: 275px; /*fix para o scroll*/
+    overflow: auto; /*fix para o scroll*/
+    flex-wrap: nowrap;
+    text-align: left;
+    position: relative;
+    top:70px;
+    background-color: #eeeeee;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0px 8px;
 }
 
 .friends-Window .tabContent#Amigos a
@@ -66,5 +152,104 @@
     border-radius: 10px;
     padding: 2px 10px;
     background: rgb(214,214,214);
-background: linear-gradient(0deg, rgba(214,214,214,1) 0%, rgba(157,157,157,1) 23%, rgba(227,227,227,1) 78%);
+    background: linear-gradient(0deg, rgba(214,214,214,1) 0%, rgba(157,157,157,1) 23%, rgba(227,227,227,1) 78%);
+}
+
+.mail-Window .tabContent a.mailItem#notOpenned,
+.mail-Window .tabContent a.mailLetter
+{
+    display: flex;
+    text-decoration: none;
+    color: #2c2c2c;
+    font-weight: 700;
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 5px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin: 6px 10px;
+    background: rgb(255,255,255);
+background: linear-gradient(180deg, rgba(255,255,255,1) 3%, rgba(236,236,236,1) 68%, rgba(222,222,222,1) 90%);
+}
+
+.mail-Window .tabContent a.mailItem#Openned img,
+.mail-Window .tabContent a.mailItem#notOpenned img,
+.mail-Window .tabContent a.mailLetter img
+{
+    position: relative;
+    top: -5px;
+    right: -10px;
+}
+
+.mail-Window .tabContent a.mailItem#Openned .message,
+.mail-Window .tabContent a.mailItem#notOpenned .message
+{
+    padding-left: -20px;
+    margin-left: 10px;
+    width: 160px;
+    overflow: hidden;
+}
+
+.mail-Window .tabContent a.mailLetter#Openned .message,
+.mail-Window .tabContent a.mailLetter#notOpenned .message
+{
+    padding-left: -20px;
+    margin-left: 10px;
+    width: 200px;
+    overflow: hidden;
+}
+
+
+.mail-Window .tabContent a.mailItem#Openned .player,
+.mail-Window .tabContent a.mailItem#notOpenned .player,
+.mail-Window .tabContent a.mailLetter#Openned .player ,
+.mail-Window .tabContent a.mailLetter#notOpenned .player 
+{
+    width: 80px;
+
+    overflow: hidden;
+}
+
+.mail-Window .tabContent .new
+{
+    position: relative;
+    width: 20px;
+    height: 20px;
+    top: -16px;
+    right: -10px;
+    z-index: 1;
+}
+.mail-Window .tabContent .new#Openned
+{
+    display: none;
+}
+
+.mail-Window .tabContent a.mailItem#Openned{
+    display: flex;
+    text-decoration: none;
+    color: #2c2c2c;
+    font-weight: 700;
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 5px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin: 6px 10px;
+    background: rgb(232,232,232);
+background: linear-gradient(180deg, rgba(232,232,232,1) 3%, rgba(195,195,195,1) 68%, rgba(166,166,166,1) 90%);
+}
+
+.mail-Window .tabContent a.mailLetter#Openned{
+    display: flex;
+    text-decoration: none;
+    color: #2c2c2c;
+    font-weight: 700;
+    border: 2px solid rgb(0, 0, 0);
+    margin-bottom: 5px;
+    height: 50px;
+    border-radius: 10px;
+    padding: 14px 20px;
+    margin: 6px 10px;
+    background: rgb(232,232,232);
+background: linear-gradient(180deg, rgba(232,232,232,1) 3%, rgba(195,195,195,1) 68%, rgba(166,166,166,1) 90%);
 }

@@ -8,8 +8,8 @@
 body
 {
     background-image: url("../img/bg.jpg");
-    background-repeat: repeat-y;
     background-size: cover;
+    background-position: center;
 }
 
 section.header 
@@ -143,6 +143,131 @@ section.pagina
     top: 0;
     height: calc(100vh - 45px);
 }
+
+section.pagina .main .myInfo
+{
+    position: absolute;
+    right: 0;
+    bottom: 5px;
+    border: 1px solid black;
+    width: 325px;
+    height: 230px;
+    border-radius: 10px;
+    padding: 5px 13px;
+    margin-right: 10px;
+    background: rgb(252,156,196);
+    background: linear-gradient(0deg, rgba(252,156,196,1) 3%, rgba(249,130,179,1) 30%, rgba(246,214,226,1) 69%);
+} 
+
+section.pagina .main .myInfo .NameLVL
+{
+    border-radius: 8px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    background-color: rgb(199, 126, 162);
+    padding-left: 90px;
+    color: #f8f8f8;
+    padding-right: 15px;
+}
+
+section.pagina .main .pingFam
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 10px;
+    height: 27px;
+    padding-left: 10px;
+    color: #f8f8f8;
+}
+
+section.pagina .main .pingFam img
+{
+    position: absolute;
+    width: 36px;
+    height: 30px;
+    right: 62%;
+}
+
+section.pagina .main .pingFam .ping
+{
+    background-color: rgb(199, 126, 162);
+    border-radius: 10px;
+    padding: 3px 9px;
+    margin-right: 9px;
+}
+
+section.pagina .main .pingFam .fam
+{
+    background-color: rgb(199, 126, 162);
+    border-radius: 10px;
+    width: 65%;
+    padding: 3px 9px;
+}
+
+section.pagina .main .myInfo .currency
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+section.pagina .main .myInfo .currency .cNames
+{
+    display: block;
+    margin-left: 70px;
+    width: 63px;
+}
+
+section.pagina .main .myInfo .currency .cContent
+{
+    display: block;
+    width: 110px;
+    background-color: rgb(199, 126, 162);
+    border-radius: 10px;
+    margin-left: -17px;
+    margin-right: 5px;
+}
+
+section.pagina .main .myInfo .currency .cContent p
+{
+    font-size: 17px;
+    text-align: center;
+    font-weight: 600;
+    margin-bottom: 3px;
+}
+
+section.pagina .main .myInfo .currency .rechargeBtn
+{
+    border: 1px solid rgb(0, 0, 0);
+    width: 80px;
+    transition: 0.2s ease-in;
+    border-radius: 20px;
+    background: rgb(255,82,0);
+    background: linear-gradient(0deg, rgba(255,82,0,1) 3%, rgba(252,111,66,1) 30%, rgba(251,198,179,1) 90%);
+}
+section.pagina .main .myInfo .currency .rechargeBtn span
+{
+    color: #f8f8f8;
+    font-size: 18px;
+    font-weight: 700;
+}
+section.pagina .main .myInfo .currency .rechargeBtn:active
+{
+    margin: 3px 0px;
+    transition: 0.2s ease-out;
+}
+section.pagina .main .myInfo .currency .rechargeBtn:hover
+{
+    border: 2px solid rgb(65, 43, 28);
+    background: rgb(255,82,0);
+    background: linear-gradient(0deg, rgb(250, 119, 59) 3%, rgb(248, 139, 103) 30%, rgb(247, 223, 215) 90%);
+    cursor: pointer;
+    transition: 0.2s ease-out;
+}
+
 
 
 .animate

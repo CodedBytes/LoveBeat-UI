@@ -1,0 +1,128 @@
+.musicPlayer
+{
+    position: absolute;
+    left: 0;
+    bottom: 5px;
+    border: 1px solid black;
+    width: 340px;
+    height: 230px;
+    border-radius: 10px;
+    margin-left: 10px;
+    background: rgb(252,156,196);
+    background: linear-gradient(0deg, rgba(252,156,196,1) 3%, rgba(249,130,179,1) 30%, rgba(246,214,226,1) 69%);
+} 
+
+
+.musicPlayer .banner
+{
+    height: 130px;
+    width: 316px;
+    border: 1px solid black;
+    border-radius: 15px;
+    position: absolute;
+    top: 5px;
+    left: 11px;
+    background-size: cover;
+    background-position: center;
+}
+
+.musicPlayer marquee
+{
+    
+    position: absolute;
+    bottom: 5px;
+    padding: 2px 2px;
+    background-color: rgb(199, 126, 162);
+    margin: 0px 10px;
+    border-radius: 10px;
+    color: rgb(0, 0, 0);
+    font-size: 17px;
+    font-weight: 900;
+}
+
+.musicPlayer .slider-container#vol
+{
+    position: absolute;
+    bottom: 50px;
+    right: 10px;
+}
+.musicPlayer .volume-slider
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 10px;
+    border-radius: 10px;
+    background: #d23fe6;
+}
+
+.musicPlayer .volume-slider::-webkit-slider-thumb
+{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgb(201, 33, 235);
+    border: 3px solid rgb(255, 255, 255);
+    cursor: pointer;
+    border-radius: 15px;
+    transition: 0.2s ease-out;
+}
+
+.musicPlayer .slider-container#timer
+{
+    position: absolute;
+    z-index: -1;
+    right: 20px;
+}
+
+.musicPlayer .pButtons
+{
+    position: absolute;
+    bottom: 25px;
+    display: flex;
+    margin: 12px 7px;  
+}
+
+.musicPlayer .pButtons .fa-step-backward,
+.musicPlayer .pButtons .fa-play-circle,
+.musicPlayer .pButtons .fa-pause-circle
+{
+    margin-right: 5px;
+    border: 0px solid black;
+    color: rgb(191, 24, 241);
+    padding: 5px 8px;
+    background: rgb(252,252,252);
+    background: linear-gradient(0deg, rgba(252,252,252,1) 0%, rgb(202, 202, 202) 0%, rgba(244,244,244,1) 69%);
+    border-radius: 20px;
+    cursor: pointer;
+}
+.musicPlayer .pButtons .fa-step-forward
+{
+    border: 0px solid black;
+    color: rgb(191, 24, 241);
+    padding: 5px 8px;
+    background: rgb(252,252,252);
+    background: linear-gradient(0deg, rgba(252,252,252,1) 0%, rgb(202, 202, 202) 0%, rgba(244,244,244,1) 69%);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.2s ease-in;
+}
+
+.musicPlayer .pButtons .fa-step-backward:hover,
+.musicPlayer .pButtons .fa-play-circle:hover,
+.musicPlayer .pButtons .fa-pause-circle:hover,
+.musicPlayer .pButtons .fa-step-forward:hover
+{
+    color: rgb(149, 0, 194);
+    transition: 0.2s ease-out;
+    background: rgb(252,252,252);
+    background: linear-gradient(0deg, rgb(231, 231, 231) 0%, rgb(184, 183, 183) 0%, rgb(228, 228, 228) 69%);
+}
+
+.musicPlayer .volume-slider::-webkit-slider-thumb:hover
+{
+    background: rgb(88, 4, 105);
+    transition: 0.2s ease-out;
+}

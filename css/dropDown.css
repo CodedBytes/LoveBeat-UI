@@ -13,6 +13,7 @@
     min-height: 70px;
     max-width: 250px;
     overflow: auto;
+    z-index: 5;
     box-shadow: 3px 4px 3px rgb(0, 0, 0);
     border-color: #ddd;
     border-radius: 10px;
@@ -23,6 +24,7 @@
 {
     display: none;
     position: absolute;
+    z-index: 5;
     padding: 10px 20px;
     background-color: #f1f1f1ec;
     min-height: 70px;
@@ -52,6 +54,7 @@
     right: 45%;
     margin-left:-170px;
     top: 116px;
+    z-index: 2;
 }
 
 
@@ -72,6 +75,7 @@
     right: 46%;
     margin-left:-170px;
     top: 120px;
+    z-index: 2;
 }
 
 .friends-Window
@@ -80,7 +84,7 @@
     position: absolute;
     padding: 40px 20px;
     background-color: #f1f1f1ec;
-    height: 330px;
+    height: 355px;
     width: 280px;
     box-shadow: 3px 4px 3px rgb(0, 0, 0);
     border-color: #ddd;
@@ -88,14 +92,34 @@
     left: 54%;
     right: 46%;
     margin-left:-170px;
+    z-index: 2;
     top: 120px;
+}
+
+.mail-Window
+{
+    display: none;
+    position: absolute;
+    padding: 40px 20px;
+    background-color: #f1f1f1ec;
+    height: 430px;
+    width: 405px;
+    box-shadow: 3px 4px 3px rgb(0, 0, 0);
+    border-color: #ddd;
+    border-radius: 10px;
+    left: 50%;
+    right: 50%;
+    margin-left:-170px;
+    z-index: 2;
+    top: 70px;
 }
 /*---------------------------------------*/
 
 .info-Window .caption,
 .advice-Window .caption,
 .changes-Window .caption,
-.friends-Window .caption
+.friends-Window .caption,
+.mail-Window .caption
 {
     border: 1px solid black;
     position: absolute;
@@ -118,7 +142,8 @@
 .info-Window .caption button.btnCloseWindow,
 .advice-Window .caption button.btnCloseWindow,
 .changes-Window .caption button.btnCloseWindow,
-.friends-Window .caption button.btnCloseWindow
+.friends-Window .caption button.btnCloseWindow,
+.mail-Window .caption button.btnCloseWindow
 {
     position: absolute;
     width: 50px;
@@ -137,7 +162,8 @@
 .info-Window .caption button.btnCloseWindow:hover,
 .advice-Window .caption button.btnCloseWindow:hover,
 .changes-Window .caption button.btnCloseWindow:hover,
-.friends-Window .caption button.btnCloseWindow:hover
+.friends-Window .caption button.btnCloseWindow:hover,
+.mail-Window .caption button.btnCloseWindow:hover
 {
     background-color: rgb(250, 80, 80);
     transition: 0.1s ease-out;
@@ -146,7 +172,8 @@
 .info-Window .caption button.btnCloseWindow:active,
 .advice-Window .caption button.btnCloseWindow:active,
 .changes-Window .caption button.btnCloseWindow:active,
-.friends-Window .caption button.btnCloseWindow:active
+.friends-Window .caption button.btnCloseWindow:active,
+.mail-Window .caption button.btnCloseWindow:active
 {
     background-color: rgb(253, 15, 15);
     top: 1px;
@@ -155,7 +182,8 @@
 .info-Window .footer,
 .advice-Window .footer,
 .changes-Window .footer,
-.friends-Window .footer
+.friends-Window .footer,
+.mail-Window .footer
 {
     position: absolute;
     display: flex;
@@ -172,7 +200,8 @@
 
 .info-Window .content,
 .advice-Window .content,
-.changes-Window .content
+.changes-Window .content,
+.mail-Window .content
 {
     display: flex;
     width: 100%;
@@ -184,7 +213,8 @@
 }
 
 
-.changes-Window .content#notCenter
+.changes-Window .content#notCenter,
+.mail-Window .tabContent
 {
     text-align: left;
     display: block;
@@ -196,7 +226,8 @@
 .info-Window .content p,
 .advice-Window .content p,
 .changes-Window .content p,
-.friends-Window .tabContent p
+.friends-Window .tabContent p,
+.mail-Window .tabContent p
 {
     font-weight: 600;
     margin-bottom: 10px;
@@ -205,7 +236,8 @@
 .info-Window .footer p,
 .advice-Window .footer p,
 .changes-Window .footer p,
-.friends-Window .footer p
+.friends-Window .footer p,
+.mail-Window .footer p
 {
     margin-top: 5px;
 }
@@ -215,7 +247,8 @@
 .info-Window::-webkit-scrollbar,
 .advice-Window::-webkit-scrollbar,
 .changes-Window .content::-webkit-scrollbar,
-.friends-Window .tabContent::-webkit-scrollbar
+.friends-Window .tabContent::-webkit-scrollbar,
+.mail-Window .tabContent::-webkit-scrollbar
 {
     width: 5px;
 }
@@ -224,7 +257,8 @@
 .info-Window::-webkit-scrollbar-thumb,
 .advice-Window::-webkit-scrollbar-thumb,
 .changes-Window .content::-webkit-scrollbar-thumb,
-.friends-Window .tabContent::-webkit-scrollbar-thumb
+.friends-Window .tabContent::-webkit-scrollbar-thumb,
+.mail-Window .tabContent::-webkit-scrollbar-thumb
 {
     background: rgb(160, 160, 160); 
     border-radius: 15px;
@@ -234,7 +268,8 @@
 .info-Window::-webkit-scrollbar-thumb:hover,
 .advice-Window::-webkit-scrollbar-thumb:hover,
 .changes-Window .content::-webkit-scrollbar-thumb:hover,
-.friends-Window .tabContent::-webkit-scrollbar-thumb:hover
+.friends-Window .tabContent::-webkit-scrollbar-thumb:hover,
+.mail-Window .tabContent::-webkit-scrollbar-thumb:hover
 {
     background: rgb(134, 134, 134); 
 }
@@ -251,7 +286,8 @@
 .showWindow,
 .showAdv,
 .showChanges,
-.showFriends
+.showFriends,
+.showMail
  {
     display: block;
     animation-name: showPopUp;
