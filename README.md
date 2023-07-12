@@ -9,15 +9,6 @@ Projeto se trata do front-end de um site onde estou simulando uma interface base
 Com algumas diferenças do estilo original, a idéia é simular os comportamentos de um cliente de jogos online em ambiente web.
 Projeto para fins de mostrar meu desempenho em estilos e modificações, focadas no front end de um webapp !
 
-Possui :
-- CSS3 / HTML5 : Adição de informações do jogador.
-- ASSETS : Novos escritas para info de player.
-- ASSETS : Novo botão de recarga de cash.
-- CSS3 : Adicionado estilo para o player de musica.
-- CSS3 : Bug no background da pagina corrigido.
-- CSS3 / HTML5 JavaScript : Mail esta funcional.
-- ASSETS : Novos icones para sistema de mails.
-
 ##
 
 Novas Adições / Correções :
