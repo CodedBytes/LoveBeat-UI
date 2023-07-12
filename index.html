@@ -7,16 +7,17 @@
     <link rel="shortcut icon" href="./img/favcon.png" type="image/x-icon">
     <link rel="stylesheet" href="./css/lobby.css">
     <link rel="stylesheet" href="./css/tabStyles.css">
+    <link rel="stylesheet" href="./css/musicPlayer.css">
     <link rel="stylesheet" href="./css/dropDown.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 </head>
-<body>
+<body id="bodyy">
 
     <!-- NavBar -->
     <section class="header">
-
+ 
         <!-- Lado esquerdo -->
         <div class="leftMenu">
             <div class="channelDrop" onclick="sfxBtn(); channelMenu();" id="btn">
@@ -34,8 +35,8 @@
         
         <!-- Lado direito -->
         <div class="rightMenu" id="desktop">
-            <a href="javascript:void(0);" class="icons" onclick="sfxIcon(); windowFriend();" id="btnFriends"><img src="./img/icons/community.png" alt="" id="btnFriends"/></a>
-            <a href="#" class="icons" onclick="sfxIcon();"><img src="./img/icons/letter.png" alt="" /></a>
+            <a href="javascript:void(0);" class="icons" onclick="sfxIcon(); windowFriend(); openTab(event, 'Amigos');" id="btnFriends"><img src="./img/icons/community.png" alt="" id="btnFriends"/></a>
+            <a href="#" class="icons" onclick="sfxIcon(); windowMail(); openTab(event, 'Gift');" id="btnMail"><img src="./img/icons/letter.png" alt="" id="btnMail"/></a>
 
             <a href="javascript:void(0);" class="icons" onclick="sfxBtn(); menu();" id="dropbtn"><img src="./img/icons/more.png" alt="" id="dropbtn" /></a>
             <div id="dropdown" class="dropdown-content">
@@ -43,7 +44,7 @@
             </div>
 
             <a href="#" class="buttons" onclick="sfxBtn(); windowAdvice();" id="windowAdv"><img src="./img/icons/button2.png" alt="" /><span>Noticias</span></a>
-            <a href="#" class="buttons" onclick="sfxBtn();"><img src="./img/icons/button1.png" alt="" /><i class="fa-brands fa-square-github"></i></a>
+            <a href="index.html" class="buttons" onclick="sfxBtn();"><img src="./img/icons/button1.png" alt="" /><i class="fa-brands fa-square-github"></i></a>
         </div>
 
     </section>
@@ -63,6 +64,64 @@
                     <p>Interface de usuário, baseada em clientes de jogos</p>
                     <p>O intuíto do projeto é simular a UI base de um Jogo com leves modificações, como Janelas, soms e algumas funções.</p>
                     <p>Sinta-se a vontade para visitar meu github, e navegar pelos repositorios disponiveis para mais projetos front-end !</p>
+                </section>
+
+                <section class="footer"><p>Versionamento da UI : v0.2</p></section>
+            </div>
+
+            <!-- Window MAIL -->
+            <div id="windowMail" class="mail-Window" style="word-break: break-word; word-wrap: break-word;">
+                <section class="caption" id="captDrag">
+                    <span>Mail</span>
+                    <button type="button" class="btnCloseWindow" id="closeMail" onclick="sfxBtn();">X</button>
+                </section>
+
+                <!-- Abas -->
+                <div class="tab" onload="openTab(event, 'Gift');">
+                    <button class="tabObj active" onclick="openTab(event, 'Gift'); sfxBtn();">Presente</button>
+                    <button class="tabObj" onclick="openTab(event, 'Letter'); sfxBtn();" id="letterStyle">Carta</button>
+                </div>
+                <div class="legenda">
+                    <div class="sender">Usuario</div><div class="mail">Mensagem</div>
+                </div>
+
+                <section class="tabContent" id="Gift" style="display: block;">
+                    <a href="#" class="mailItem"  id="notOpenned">
+                        <span class="player"> GM </span>
+                        <span class="message"> Mensagem nova </span>
+                        <img src="./img/icons/mail_typeof_present.png" alt="" width="10%" height="30px">
+                        
+                        <div class="new"  id="openned">
+                            <img src="./img/icons/mail_new.png" alt="">
+                        </div>
+                    </a>
+
+                    <a href="#" class="mailItem"  id="Openned">
+                        <span class="player"> GM </span>
+                        <span class="message"> Mensagem vista </span>
+                        <img src="./img/icons/mail_typeof_present.png" alt="" width="10%" height="30px">
+                        
+                        <div class="new" id="Openned"> 
+                            <img src="./img/icons/mail_new.png" alt="">
+                        </div>
+                    </a>
+                </section>
+
+                <section class="tabContent"  id="Letter" style="display: none;">
+                    <a href="#" class="mailLetter" id="notOpenned">
+                        <span class="player"> GUEST </span>
+                        <span class="message"> Mensagem do mail nova </span>
+                    </a>
+
+                    <a href="#" class="mailLetter" id="notOpenned">
+                        <span class="player"> GM </span>
+                        <span class="message"> Mensagem do mail nova 2</span>
+                    </a>
+
+                    <a href="#" class="mailLetter" id="Openned">
+                        <span class="player"> GM </span>
+                        <span class="message"> Mensagem do mail vista 1</span>
+                    </a>
                 </section>
 
                 <section class="footer"><p>Versionamento da UI : v0.2</p></section>
@@ -90,16 +149,16 @@
                     <button type="button" class="btnCloseWindow" id="closeChanges" onclick="sfxBtn();">X</button>
                 </section>
 
-                <section class="content" id="notCenter">
+                <section class="content" id="notCenter" >
                     <center><p>Mudanças desde a ultima repo :</p><br></center><!-- temp -->
-                    <p> - CSS3 / JS : Adição de mais janelas.</p>
-                    <p> - CSS3 : Adição de scrollbars para janelas novas.</p>
-                    <p> - CSS3 : Bug no scroll, no qual estava rolando tudo e não só o conteúdo, concertado.</p>
-                    <p> - CSS3 : Codigo mais organizado.</p>
-                    <p> - HTML5 : Codigo mais organizado.</p>
-                    <p> - JQuery : Função 'removeAttr', usada para controlar o reposicionamento das janelas, foi mudada de lugar.</p>
-                    <p> - Funções : 2 novos botões: Changes e Community funcionais.</p>
-                    <p> - JavaScript : Novo JS para controlar as abas da janela community.</p>
+                    <p> - CSS3 / HTML5 : Adição de informações do jogador.</p>
+                    <p> - ASSETS : Novos escritas para info de player.</p>
+                    <p> - JavaScript : Player simples para as musicas do jogo.</p>
+                    <p> - ASSETS : Novo botão de recarga de cash.</p>
+                    <p> - CSS3 : Adicionado estilo para o player de musica.</p>
+                    <p> - CSS3 : Bug no background da pagina corrigido.</p>
+                    <p> - CSS3 / HTML5 JavaScript : Mail esta funcional.</p>
+                    <p> - ASSETS : Novos icones para sistema de mails.</p>
                 </section>
 
                 <section class="footer"><p>Usuario : Guest</p></section>
@@ -115,7 +174,7 @@
                 <!-- Abas -->
                 <div class="tab" onload="openTab(event, 'Amigos');">
                     <button class="tabObj active" onclick="openTab(event, 'Amigos'); sfxBtn();">Amigos</button>
-                    <button class="tabObj" onclick="openTab(event, 'Blocks'); sfxBtn();">Bloqueados</button>
+                    <button class="tabObj" onclick="openTab(event, 'Blocks'); sfxBtn();" id="friendBStyle">Bloqueados</button>
                 </div>
 
                 <!-- Conteudos aba de amigos -->
@@ -141,7 +200,81 @@
             <!-- End of Window List -->
 
 
-            
+            <!-- PAGE -->
+
+
+            <!-- Player info -->
+            <div class="myInfo">
+                <div class="NameLVL">
+                    Guest
+                    <div class="level">100 LVL</div>
+                </div>
+
+                <div class="pingFam">
+                    <div class="ping">Stable</div>
+                    <img src="./img/stats/fam.png" alt="">
+                    <div class="fam">CodedBytes</div>
+                </div>
+
+                <div class="currency">
+                    <div class="cNames">
+                        <img src="./img/stats/beat.png" alt="">
+                        <img src="./img/stats/cash.png" alt="">
+                        <img src="./img/stats/LPoint.png" alt="">
+                        <img src="./img/stats/stars.png" alt="">
+                        <img src="./img/stats/hearts.png" alt="">
+                    </div>
+
+                    <div class="cContent">
+                        <p>9999999</p>
+                        <p>9999999</p>
+                        <p>9999999</p>
+                        <p>9999999</p>
+                        <p>9999999</p>
+                    </div>
+
+                    <button type="button" class="rechargeBtn" onclick="sfxBtn();"> 
+                        <img src="./img/icons/cashRecharge.png" alt="">
+                        <span>Charge</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="musicPlayer" >
+                <div class="details">
+                    <div class="banner"></div>
+                    
+                    <marquee direction="left" >
+                        <div class="track-name">Nome</div>
+                    </marquee>
+                </div>
+
+                <div class="slider-container" id="timer">
+                    <div class="current-time">00:00</div>
+                    <input type="range" min="1" max="100" value="0" class="seek-slider" onchange="seekTo();">
+                    <div class="total-duration">00:00</div>
+                </div>
+
+                <div class="slider-container" id="vol">
+                    <i class="fa fa-volume-down"></i>
+                    <input type="range" min="1" max="41" value="41" class="volume-slider" onchange="setVolume();">
+                    <i class="fa fa-volume-up"></i>
+                </div>
+
+                <div class="pButtons" >
+                    <div class="prev-track" onclick="prevTrack();">
+                        <i class="fa fa-step-backward fa-2x"></i>
+                    </div>
+
+                    <div class="playpause-track" id="play" onclick="playpauseTrack();" >
+                        <i class="fa fa-play-circle fa-2x"></i>
+                    </div>
+
+                    <div class="next-track" onclick="nextTrack();">
+                        <i class="fa fa-step-forward fa-2x"></i>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -159,9 +292,14 @@
     
     <!-- Js para controlar as tabs da janela community -->
     <script src="./js/tabHandler.js"></script>
+  
+    <!-- Player de musica -->
+    <script src="./js/musicPlayer.js"></script>
 
     <!-- Snippet que adiciona listener na div do dropdown de canais. -->
     <script>
+        document.getElementById("play").addEventListener("load", autoStartRandom()); 
+        
         document.getElementById('btn').addEventListener('click', function() {
             var c = document.getElementsByClassName('downArrow');
             for (var i = 0; i < c.length; i++) {
