@@ -10,11 +10,13 @@ Com algumas diferenças do estilo original, a idéia é simular os comportamento
 Projeto para fins de mostrar meu desempenho em estilos e modificações, focadas no front end de um webapp !
 
 Possui :
-- Header usando um background gradiente.
-- Animações com CSS3 puro
-- PopUps usando JavaScript Puro.
-- Jquery basico para funções como o draggable para as janelas, e limites pro mesmo.
-- Soms interativos para cada elemento.
+- CSS3 / HTML5 : Adição de informações do jogador.
+- ASSETS : Novos escritas para info de player.
+- ASSETS : Novo botão de recarga de cash.
+- CSS3 : Adicionado estilo para o player de musica.
+- CSS3 : Bug no background da pagina corrigido.
+- CSS3 / HTML5 JavaScript : Mail esta funcional.
+- ASSETS : Novos icones para sistema de mails.
 
 ##
 
@@ -27,7 +29,14 @@ Novas Adições / Correções :
 - HTML5 : Codigo mais organizado.</p>
 - JQuery : Função 'removeAttr', usada para controlar o reposicionamento das janelas, foi mudada de lugar.</p>
 - Funções : 2 novos botões: Changes e Community funcionais.</p>
-- JavaScript : Novo JS para controlar as abas da janela community.</p>
+- JavaScript : Novo JS para controlar as abas da janela community e mail</p>
+
+##
+
+Bugs conhecidos no projeto :
+
+- Botoes das janelas community e mail em conflito ao ativar botões com as duas janelas abertas.
+- Player de musica era pra iniciar sozinha ao arualziar a pagina, mas so funciona caso a pagina for recarregada de outra forma
 
  ##
  
@@ -42,7 +51,9 @@ As Frameworks usadas foram : <br>
   ##
 
 Imagem da pagina : <br>
-<img src="/demo1.png" width="500px">
+<img src="/new_demo1.png" width="400px">
+<img src="/new_demo2.png" width="400px">
+<img src="/new_demo3.png" width="400px">
 ## 
 
 ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white) <br> DJ.Next#1649
