@@ -76,6 +76,19 @@ function windowFriend() {
   }
 }
 
+// Janela friends
+function windowMail() {
+  document.getElementById("windowMail").classList.toggle("showMail");
+  if(document.getElementById("windowMail").classList.contains("showMail"))
+  {
+    var sfx = new Audio("./audios/diagOpen.wav");
+    sfx.play();
+  }else{
+    var sfx = new Audio("./audios/diagClose.wav");
+    sfx.play();
+  }
+}
+
 
 
 // Fecha Dropdown se clicar fora dele
@@ -106,6 +119,21 @@ window.onclick = function(event) {
         var sfx = new Audio("./audios/diagClose.wav");
         sfx.play();
       }
+    }
+  }
+
+  //Janela de Mail
+  if (!event.target.matches('#btnMail')) {
+    var dropdowns = document.getElementsByClassName("mail-Window");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('showMail') && event.target.matches('#closeMail')) {
+        openDropdown.classList.remove('showMail');
+        var sfx = new Audio("./audios/diagClose.wav");
+        $("#windowMail").removeAttr('style');
+        sfx.play();
+      }else{}
     }
   }
 
