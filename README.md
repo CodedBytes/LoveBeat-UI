@@ -47,9 +47,7 @@ As Frameworks usadas foram : <br>
   ##
 
 Imagem da pagina : <br>
-<img src="/new_demo1.png" width="400px">
-<img src="/new_demo2.png" width="400px">
-<img src="/new_demo3.png" width="400px">
+<img src="/lobby.png" width="400px">
 ## 
 
 ![Discord](https://img.shields.io/badge/Discord-%235865F2.svg?style=for-the-badge&logo=discord&logoColor=white) <br> DJ.Next#1649
