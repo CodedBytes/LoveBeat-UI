@@ -9,7 +9,7 @@ Projeto se trata do front-end de um site onde estou simulando uma interface base
 Com algumas diferenças do estilo original, a idéia é simular os comportamentos de um cliente de jogos online em ambiente web.
 Projeto para fins de mostrar meu desempenho em estilos e modificações, focadas no front end de um webapp !
 
-OBS : Projeto totalmente responsivo ate a resolução : 850X700px, sendo adequado para tablets e desktops apenas ! 
+OBS : Projeto totalmente responsivo ate a resolução : 850X700px, sendo adequado para tablets e desktops apenas ! <br>
 Para uma experiencia de cliente .exe excelente, recomenda-se usar o full screen do seu navegador, ou um monitor 1080p.
 
 ##
