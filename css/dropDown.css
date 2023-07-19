@@ -252,16 +252,22 @@
 {
     width: 5px;
 }
+section.pagina .main .roomsWindow .wContent::-webkit-scrollbar
+{
+    width: 10px;
+}
 
 .dropdown-content::-webkit-scrollbar-thumb,
 .info-Window::-webkit-scrollbar-thumb,
 .advice-Window::-webkit-scrollbar-thumb,
 .changes-Window .content::-webkit-scrollbar-thumb,
 .friends-Window .tabContent::-webkit-scrollbar-thumb,
-.mail-Window .tabContent::-webkit-scrollbar-thumb
+.mail-Window .tabContent::-webkit-scrollbar-thumb,
+section.pagina .main .roomsWindow .wContent::-webkit-scrollbar-thumb
 {
     background: rgb(160, 160, 160); 
     border-radius: 15px;
+    border: 1px solid black;
 }
 
 .dropdown-content::-webkit-scrollbar-thumb:hover,
@@ -269,7 +275,8 @@
 .advice-Window::-webkit-scrollbar-thumb:hover,
 .changes-Window .content::-webkit-scrollbar-thumb:hover,
 .friends-Window .tabContent::-webkit-scrollbar-thumb:hover,
-.mail-Window .tabContent::-webkit-scrollbar-thumb:hover
+.mail-Window .tabContent::-webkit-scrollbar-thumb:hover,
+section.pagina .main .roomsWindow .wContent::-webkit-scrollbar-thumb:hover
 {
     background: rgb(134, 134, 134); 
 }
