@@ -106,7 +106,8 @@ section.header a.buttons:active
     margin-top: 2px;
 }
 
-section.header .channelDrop
+section.header .channelDrop,
+section.pagina .main .roomsWindow .right
 {
     border-radius: 16px;
     width: 150px;
@@ -116,7 +117,8 @@ section.header .channelDrop
     margin-right: 10px;
 }
 
-section.header .channelDrop span
+section.header .channelDrop span,
+section.pagina .main .roomsWindow .right span
 {
     font-size: 21px;
     font-weight: bold;
@@ -132,6 +134,19 @@ section.header button.downArrow
     height: 30px;
     border: 1px solid black;
     background-image: url("../img/icons/down-long-solid.svg");
+    background-repeat: no-repeat;
+    background-size: 12px;
+    background-position: 8px;
+    float: right;
+}
+
+section.pagina .main .roomsWindow .right button.upArrow
+{
+    border-radius: 20px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    background-image: url("../img/icons/up-long-solid.svg");
     background-repeat: no-repeat;
     background-size: 12px;
     background-position: 8px;
@@ -268,11 +283,302 @@ section.pagina .main .myInfo .currency .rechargeBtn:hover
     transition: 0.2s ease-out;
 }
 
+section.pagina .main .roomsWindow
+{
+    position: relative;
+    width: calc(100vw - 100px);
+    height: calc(100vh - 325px);
+    top: 18px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    background: rgb(250,248,249);
+    background: radial-gradient(circle, rgba(250,248,249,0.9) 18%, rgba(246,184,230,0.9) 92%, rgba(246,187,230,0.9) 100%);
+}
+
+section.pagina .main .roomsWindow .wContent
+{
+    position: relative;
+    display: flex;
+    align-content: flex-start;
+    flex-wrap: wrap;
+    width: calc(100vw - 125px);
+    overflow: auto;
+    height: calc(100vh - 410px); 
+    top: 10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px solid rgba(255, 255, 255, 0);
+    border-radius: 10px;
+    background: rgb(57,47,39);
+    background: linear-gradient(180deg, rgba(57,47,39,1) 0%, rgba(47,38,30,1) 20%, rgba(80,64,49,1) 100%);
+}
+
+section.pagina .main .roomsWindow .buttons
+{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    padding: 27px 20px;
+}
+
+section.pagina .main .roomsWindow .buttons .left button
+{
+    width: 105px;
+    height: 44px;
+    border: 3px solid rgb(110, 50, 110);
+    border-radius: 8px;
+    font-size: 19px;
+    color: #f8f8f8;
+    font-weight: 900;
+    cursor: pointer;
+    background: rgb(236,69,231);
+    background: linear-gradient(180deg, rgba(236,69,231,1) 18%, rgba(138,14,134,1) 48%, rgba(236,69,231,1) 74%);
+}
+
+section.pagina .main .roomsWindow .buttons .centered button
+{
+    width: 130px;
+    height: 44px;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 25px;
+    cursor: pointer;
+    margin-right: 10px;
+    font-size: 17px;
+    font-weight: 900;
+    background: rgb(255, 177, 252);
+}
+section.pagina .main .roomsWindow .buttons .left button span
+{
+    position: relative;
+    top: -10px;
+}
+section.pagina .main .roomsWindow .buttons .centered button span
+{
+    position: relative;
+    top: -7px;
+}
+section.pagina .main .roomsWindow .buttons .centered button .bigger
+{
+    font-size: 20px;
+    position: relative;
+    top: -14px;
+}
+
+section.pagina .main .roomsWindow .wContent .roomLounge
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 630px;
+    height: 95px;
+    margin-bottom: 6px;
+    border-radius: 12px;
+    padding: 5px 5px;
+    border: 3px solid rgb(250, 76, 105);
+    background: rgb(251,111,224);
+    background: linear-gradient(180deg, rgb(255, 115, 227) 25%, rgb(255, 39, 248) 48%, rgb(255, 110, 226) 63%);
+}
+
+section.pagina .main .roomsWindow .wContent .roomLounge .centerInfo
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 223px;
+    font-size: 22px;
+    color: #f8f8f8;
+    font-weight: bold;
+}
+
+section.pagina .main .roomsWindow .wContent .roomLounge .centerInfo .rl-players
+{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 223px;
+    height: 48px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background-color: rgb(104, 10, 84);
+}
+section.pagina .main .roomsWindow .wContent .roomLounge .centerInfo .rl-players img
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+section.pagina .main .roomsWindow .wContent .roomVIP
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 630px;
+    height: 95px;
+    margin-bottom: 6px;
+    border-radius: 12px;
+    padding: 2px 5px;
+    border: 3px solid rgb(180, 96, 16);
+    background: rgb(228, 111, 2);
+    background: linear-gradient(180deg, rgb(250, 139, 35) 25%, rgb(228, 111, 2) 48%, rgb(250, 128, 13) 63%);
+}
+
+section.pagina .main .roomsWindow .wContent .roomVIP .infoBox,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+section.pagina .main .roomsWindow .wContent .roomVIP .infoBox .roomName,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .roomName,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .roomName
+{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    height: 26px;
+    color: #f8f8f8;
+    border-radius: 20px;
+    background-color: rgb(168, 90, 17);
+}
+
+section.pagina .main .roomsWindow .wContent .roomVIP .infoBox .roomName .number,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .roomName .number,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .roomName .number
+{
+    font-size: 22px;
+    color: #f8f8f8;
+    margin-left: 13px;
+    font-weight: bold;
+}
+
+section.pagina .main .roomsWindow .wContent .roomVIP .infoBox .roomName .name,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .roomName .name,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .roomName .name
+{
+    font-size: 18px;
+    width: 70%;
+    color: #f8f8f8;
+    margin-top: 5px;
+    padding-left: 15px;
+}
+
+section.pagina .main .roomsWindow .wContent .roomVIP .infoBox .roomName .powers,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .roomName .powers,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .roomName .powers
+{
+    margin-top: 1px;
+}
+
+section.pagina .main .roomsWindow .wContent .roomVIP .infoBox .subInfos,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .subInfos,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .subInfos
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 270px;
+    margin-left: 50px;
+}
+
+section.pagina .main .roomsWindow .wContent .roomVIP .infoBox .rv-players,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .rn-players,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .rn-players
+{
+    border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    width: 223px;
+    height: 27px;
+    padding: 2px 10px;
+    border-radius: 10px;
+    background-color: rgb(168, 90, 17);
+}
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .rn-players,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .roomName
+{
+    background-color: rgb(17, 19, 168);
+}
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .roomName,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .rn-players
+{
+    background-color: rgb(51, 51, 51);
+}
 
 
+section.pagina .main .roomsWindow .wContent .roomVIP .infoBox .rv-players img,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .rn-players img,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .rn-players img
+{
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+}
+
+section.pagina .main .roomsWindow .wContent .roomVIP .infoBox .rv-status,
+section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .rn-status,
+section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .rn-status
+{
+    font-size: 22px;
+    margin-left: 25%;
+    color: #f8f8f8;
+    font-weight: bold;
+}
+
+section.pagina .main .roomsWindow .wContent .roomNormal
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 630px;
+    height: 95px;
+    margin-bottom: 6px;
+    border-radius: 12px;
+    padding: 2px 5px;
+    border: 3px solid rgb(46, 16, 180);
+    background: rgb(2, 92, 228);
+    background: linear-gradient(180deg, rgb(67, 133, 255) 25%, rgb(2, 92, 228) 48%, rgb(47, 120, 255) 63%);
+}
+
+section.pagina .main .roomsWindow .wContent .roomPlaying
+{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    width: 630px;
+    height: 95px;
+    margin-bottom: 6px;
+    border-radius: 12px;
+    padding: 2px 5px;
+    border: 3px solid rgb(31, 31, 31);
+    background: rgb(66, 66, 66);
+    background: linear-gradient(180deg, rgb(104, 104, 104) 25%, rgb(66, 66, 66) 48%, rgb(88, 88, 88) 63%);
+}
+
+
+
+/* Animações */
 .animate
 {
     animation: downArrow 0.1s linear;
+}
+.animateUp
+{
+    animation: upArrow 0.1s linear;
 }
 
 @keyframes downArrow
@@ -280,4 +586,21 @@ section.pagina .main .myInfo .currency .rechargeBtn:hover
     0%{margin-top: 0px;}
     50%{margin-top: 2px;}
     100%{margin-top: 0px;}
+}
+
+@keyframes upArrow
+{
+    0%{margin-top: 0px;}
+    50%{margin-top: -2px;}
+    100%{margin-top: 0px;}
+}
+
+
+/* Ajustes de sala */
+@media screen and (min-width: 1500px) {
+    section.pagina .main .roomsWindow .wContent
+    {
+        padding-left: 55px;
+        padding-right: 55px;
+    }
 }
