@@ -9,6 +9,9 @@ Projeto se trata do front-end de um site onde estou simulando uma interface base
 Com algumas diferenças do estilo original, a idéia é simular os comportamentos de um cliente de jogos online em ambiente web.
 Projeto para fins de mostrar meu desempenho em estilos e modificações, focadas no front end de um webapp !
 
+OBS : Projeto totalmente responsivo ate a resolução : 850X700px, sendo adequado para tablets e desktops apenas ! 
+Para uma experiencia de cliente .exe excelente, recomenda-se usar o full screen do seu navegador, ou um monitor 1080p.
+
 ##
 
 Novas Adições / Correções :
@@ -21,6 +24,8 @@ Novas Adições / Correções :
 - JQuery : Função 'removeAttr', usada para controlar o reposicionamento das janelas, foi mudada de lugar.</p>
 - Funções : 2 novos botões: Changes e Community funcionais.</p>
 - JavaScript : Novo JS para controlar as abas da janela community e mail</p>
+- Assets : Novos icones.
+- HTML5 / CSS3 : Nova janela para listagem de salas.
 
 ##
 
