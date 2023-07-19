@@ -31,8 +31,8 @@ Novas Adições / Correções :
 
 Bugs conhecidos no projeto :
 
-- Botoes das janelas community e mail em conflito ao ativar botões com as duas janelas abertas.
-- Player de musica era pra iniciar sozinha ao arualziar a pagina, mas so funciona caso a pagina for recarregada de outra forma
+- Botões das janelas, community e mail, em conflito ao ativar botões com as duas janelas abertas.
+- Player de musica era pra iniciar sozinho ao atualizar a pagina, mas apenas funciona caso a pagina seja recarregada de outra forma.
 
  ##
  
