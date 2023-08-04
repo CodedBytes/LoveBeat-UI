@@ -379,7 +379,8 @@ section.pagina .main .roomsWindow .wContent .roomLounge
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 550px;
+    width: 530px;
+    text-decoration: none;
     height: 95px;
     margin-bottom: 6px;
     border-radius: 12px;
@@ -423,7 +424,8 @@ section.pagina .main .roomsWindow .wContent .roomVIP
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 550px;
+    width: 530px;
+    text-decoration: none;
     height: 95px;
     margin-bottom: 6px;
     border-radius: 12px;
@@ -471,7 +473,7 @@ section.pagina .main .roomsWindow .wContent .roomNormal .infoBox .roomName .name
 section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .roomName .name
 {
     font-size: 18px;
-    width: 70%;
+    width: 60%;
     color: #f8f8f8;
     margin-top: 5px;
     padding-left: 15px;
@@ -491,8 +493,9 @@ section.pagina .main .roomsWindow .wContent .roomPlaying .infoBox .subInfos
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    width: 270px;
-    margin-left: 50px;
+    width: 230px;
+    margin-left: 10px;
+    margin-top: 2px;
 }
 
 section.pagina .main .roomsWindow .wContent .roomVIP .infoBox .rv-players,
@@ -544,7 +547,8 @@ section.pagina .main .roomsWindow .wContent .roomNormal
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 550px;
+    width: 530px;
+    text-decoration: none;
     height: 95px;
     margin-bottom: 6px;
     border-radius: 12px;
@@ -559,8 +563,9 @@ section.pagina .main .roomsWindow .wContent .roomPlaying
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 550px;
+    width: 530px;
     height: 95px;
+    text-decoration: none;
     margin-bottom: 6px;
     border-radius: 12px;
     padding: 2px 5px;
