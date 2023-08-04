@@ -379,7 +379,7 @@ section.pagina .main .roomsWindow .wContent .roomLounge
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 630px;
+    width: 600px;
     height: 95px;
     margin-bottom: 6px;
     border-radius: 12px;
@@ -423,7 +423,7 @@ section.pagina .main .roomsWindow .wContent .roomVIP
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 630px;
+    width: 600px;
     height: 95px;
     margin-bottom: 6px;
     border-radius: 12px;
@@ -544,7 +544,7 @@ section.pagina .main .roomsWindow .wContent .roomNormal
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
-    width: 630px;
+    width: 600px;
     height: 95px;
     margin-bottom: 6px;
     border-radius: 12px;
